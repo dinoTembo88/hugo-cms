@@ -46,3 +46,16 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Sažetak", name: "description", widget: "text"}
       - {label: "Slika", name: "image", widget: "image", required: false}
       - {label: "Tekst", name: "body", widget: "markdown"}
+
+  - name: "posebne_ponude" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Posebne ponude" # Used in the UI, ie.: "New Post"
+    folder: "site/content/ponude" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Početni datum", name: "date-from", widget: "datetime"}
+      - {label: "Krajnji datum", name: "date-to", widget: "datetime"}
+      - {label: "Sažetak", name: "description", widget: "text"}
+      - {label: "Cijena", name: "cijena", widget: "text"}
+      - {label: "Slika", name: "image", widget: "image", required: false}
+      - {label: "Tekst", name: "body", widget: "markdown"}
